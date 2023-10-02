@@ -1,5 +1,5 @@
 {
-  "name": "bit-by-bit-tripguide",
+  "name": "tripguide",
   "version": "0.1.0",
   "private": true,
   "prisma": {
