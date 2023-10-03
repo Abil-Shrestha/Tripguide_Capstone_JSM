@@ -5,7 +5,6 @@ import { Dialog, Transition } from '@headlessui/react';
 import { AiOutlineGoogle, AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import { IoCloseOutline } from 'react-icons/io5';
 import { FaFacebookF } from 'react-icons/fa';
-import { signIn } from 'next-auth/react';
 
 import { Button, Divider, FormInput } from '@components';
 
@@ -39,20 +38,6 @@ const AuthForm = ({ open, setOpen, setIsForgotPassword } : AuthFormProps) => {
 
   const handleAuth = async (type: string) => {
     setOpen(false);
-    if (type === 'email') {
-      const { error } = await signIn(type, {
-        redirect: false,
-        callbackUrl: window.location.href,
-        email: values.email,
-      });
-      if (error) {
-        handleAlert({
-          type: 'error',
-          message: error,
-        });
-      }
-    }
-    signIn(type, { callbackUrl: window.location.href });
   };
 
   const handleForgotPassword = (e) => {

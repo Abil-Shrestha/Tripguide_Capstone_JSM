@@ -52,7 +52,6 @@ const FlightListings = () => {
   }, [flightData]);
 
   useEffect(() => {
-    console.log('flights', flights);
     if (flights !== null && flights !== undefined) {
       setFilteredFlights(flights?.airlines?.slice(pagination.start, pagination.end));
 

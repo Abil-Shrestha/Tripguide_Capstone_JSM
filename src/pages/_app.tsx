@@ -4,7 +4,6 @@ import { AppProps } from 'next/app';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { ThemeProvider } from 'next-themes';
-import { SessionProvider } from 'next-auth/react';
 import { Provider } from 'react-redux';
 
 import { Toast, Navbar, Footer } from '@components';
@@ -18,26 +17,24 @@ import { store } from '@redux/store';
 const MyApp = ({ Component, pageProps: { session, ...pageProps } }: AppProps) => {
   const router = useRouter();
   return (
-    <SessionProvider session={session}>
-      <Provider store={store}>
-        <GlobalProvider>
-          <AlertProvider>
-            <ThemeProvider attribute='class'>
-              <div className='relative min-h-screen overflow-x-hidden bg-primaryGray dark:bg-cBlack-1 dark:text-white'>
-                <Navbar />
-                <AnimatePresence mode='wait'>
-                  <motion.main key={router.route} variants={pageVariants} initial='initial' animate='animate' exit='exit'>
-                    <Toast />
-                    <Component {...pageProps} />
-                  </motion.main>
-                </AnimatePresence>
-                <Footer />
-              </div>
-            </ThemeProvider>
-          </AlertProvider>
-        </GlobalProvider>
-      </Provider>
-    </SessionProvider>
+    <Provider store={store}>
+      <GlobalProvider>
+        <AlertProvider>
+          <ThemeProvider attribute='class'>
+            <div className='relative min-h-screen overflow-x-hidden bg-primaryGray dark:bg-cBlack-1 dark:text-white'>
+              <Navbar />
+              <AnimatePresence mode='wait'>
+                <motion.main key={router.route} variants={pageVariants} initial='initial' animate='animate' exit='exit'>
+                  <Toast />
+                  <Component {...pageProps} />
+                </motion.main>
+              </AnimatePresence>
+              <Footer />
+            </div>
+          </ThemeProvider>
+        </AlertProvider>
+      </GlobalProvider>
+    </Provider>
   );
 };
 

@@ -49,7 +49,6 @@
   <img src="./public/Screenshots/6.png" alt="screenshot" "/>
   <img src="./public/Screenshots/8.png" alt="screenshot" "/>
   
-  
 </div>
 
 

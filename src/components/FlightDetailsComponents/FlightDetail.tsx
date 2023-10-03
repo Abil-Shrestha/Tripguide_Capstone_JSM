@@ -3,7 +3,7 @@ import { useGlobalContext } from '@context/GlobalContext';
 
 const FlightDetail = () => {
   const { flightOneWay } = useGlobalContext();
-  console.log('hi');
+
   return (
     <div className='flex flex-col gap-[40px] w-[938px] p-[38px_47px] bg-white dark:bg-cBlack-2 border-[1px] border-cBlack-6 dark:border-cBlack-3 rounded-[20px]'>
       <OneWay />

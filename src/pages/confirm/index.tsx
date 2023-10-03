@@ -1,7 +1,6 @@
 import { ChangeEvent, useState } from 'react';
 import Image from 'next/image';
 import { FiCheck } from 'react-icons/fi';
-import { useSession } from 'next-auth/react';
 
 import { Checkbox, CreditCardInput, Crumbs, PlaceholderCard, Summary, YourTour } from '@components';
 import { ccimages, saveCardLabel } from '@utils/tempdata/Bookings';
@@ -9,7 +8,6 @@ import { ccimages, saveCardLabel } from '@utils/tempdata/Bookings';
 const Confirm = () => {
   const [selectedCard, setSelectedCard] = useState('');
   const [saveCard, setSaveCard] = useState([]);
-  const { data: session } = useSession();
   const handleSelectCard = (card: string) => {
     setSelectedCard(card);
   };
@@ -69,9 +67,6 @@ const Confirm = () => {
             </div>
             {/* Credit card Input */}
             <div className='flex flex-col gap-[20px] w-[470px]'>
-              <div className=''>
-                <CreditCardInput />
-              </div>
               <Checkbox label={saveCardLabel} checked={saveCard} onChange={handleSaveCard} />
             </div>
           </div>
