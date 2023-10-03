@@ -17,14 +17,9 @@ interface ICustomInput {
   onClick: any
 }
 
-const customClasses = 'react-datepicker__month-container react-datepicker__header'
-+ ' react-datepicker__day-names react-datepicker__day-name react-datepicker__month'
-+ ' react-datepicker__week react-datepicker__day react-datepicker__day--selected react-datepicker__day--today'
-+ ' react-datepicker__day--in-selecting-range react-datepicker__day--in-range react-datepicker__day--disabled';
-
 const MyContainer = ({ className, children }) => (
   <CalendarContainer className={className}>
-    <div className={`flex justify-around px-1 h-max w-[686px] bg-white shadow-home-bookings-card ${customClasses}`}>
+    <div className='flex justify-around px-1 h-max w-[686px] pb-2 bg-primary shadow-home-bookings-card'>
       {children}
     </div>
   </CalendarContainer>
@@ -100,9 +95,6 @@ const Calendar = ({ id, label, type, startDate, endDate, setStartDate, setEndDat
     }
   };
 
-  const styles = {
-    calendar: 'flex items-center justify-center w-fit font-DMSans border-none',
-  };
 
   return (
     <DatePicker
@@ -117,7 +109,7 @@ const Calendar = ({ id, label, type, startDate, endDate, setStartDate, setEndDat
       showDisabledMonthNavigation
       customInput={<CustomInput id={id} label={label} startDate={startDate} endDate={endDate} onClick={undefined} />}
       calendarContainer={MyContainer}
-      calendarClassName={styles.calendar}
+      calendarClassName='flex items-center justify-center w-fit font-DMSans border-none'
       renderCustomHeader={({
         monthDate,
         customHeaderCount,
