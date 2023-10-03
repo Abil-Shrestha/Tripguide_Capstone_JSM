@@ -54,7 +54,6 @@
 <!-- TechStack -->
 ### :space_invader: Tech Stack
 
-<details>
   <ul>
     <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
     <li><a href="https://nextjs.org/">Next.js</a></li>
@@ -63,7 +62,6 @@
     <li><a href="https://redux-toolkit.js.org/">Redux Toolkit</a></li>
     <li><a href="https://prisma.io/">Prisma</a></li> 
   </ul>
-</details>
 
 
 <!-- Color Reference -->
