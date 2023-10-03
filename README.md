@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="assets/tripguide_logo.jpg" alt="logo" height="auto" />
+  <img src="https://github.com/Abil-Shrestha/Tripguide_Capstone_JSM/blob/main/public/assets/tipguide_logo.jpg" alt="logo" height="auto" />
   <h1>Tripguide</h1>
   
   <p>
