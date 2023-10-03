@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { Switch } from '@headlessui/react';
 import { useTheme } from 'next-themes';
 
-import { MenuDropdown, CustomSelect, AuthModal, DarkModeToggleNav, DarkModeToggle } from '@components';
+import { CustomSelect, AuthModal, DarkModeToggleNav, DarkModeToggle } from '@components';
 import { languages, currencies } from '@constants';
 import { useGlobalContext } from '@context/GlobalContext';
 
