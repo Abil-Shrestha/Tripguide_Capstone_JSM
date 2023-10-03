@@ -101,7 +101,7 @@ const Calendar = ({ id, label, type, startDate, endDate, setStartDate, setEndDat
   };
 
   const styles = {
-    calendar: 'flex items-center justify-center w-full font-DMSans border-none',
+    calendar: 'flex items-center justify-center w-fit font-DMSans border-none',
   };
 
   return (
@@ -132,9 +132,9 @@ const Calendar = ({ id, label, type, startDate, endDate, setStartDate, setEndDat
             style={customHeaderCount === 1 ? { visibility: 'hidden' } : null}
             onClick={decreaseMonth}
           >
-            <MdKeyboardArrowLeft className='w-5 h-5 text-cBlack-4 dark:text-cBlack-8' />
+            <MdKeyboardArrowLeft className='w-4 h-5 text-cBlack-4 dark:text-cBlack-8' />
           </button>
-          <p className='text-cBlack-3 dark:text-cBlack-8 text-[20px] font-medium'>
+          <p className='text-cBlack-3 dark:text-cBlack-8 text-[25px] font-medium'>
             {monthDate.toLocaleString('en-US', {
               month: 'long',
               year: 'numeric',
@@ -147,7 +147,7 @@ const Calendar = ({ id, label, type, startDate, endDate, setStartDate, setEndDat
             style={customHeaderCount === 0 ? { visibility: 'hidden' } : null}
             onClick={increaseMonth}
           >
-            <MdKeyboardArrowRight className='w-5 h-5 text-cBlack-4 dark:text-cBlack-8' />
+            <MdKeyboardArrowRight className='w-4 h-5 text-cBlack-4 dark:text-cBlack-8' />
           </button>
         </div>
       )}
