@@ -24,12 +24,13 @@ type User = {
 }
 
 const MenuDropdown = () => {
-  const { data: session } = useSession();
-  const { name, email, image } : User = session?.user || {};
+  const name = 'jwick';
+  const email = 'jwick007@nomail.com';
+  const image = '/public/assets/tipguide_logo.jpg';
 
   const handleLogout = (route: string) => {
     if (route === 'Logout') {
-      signOut({ callbackUrl: '/' });
+      console.log('logged out');
     }
   };
 
@@ -67,8 +68,7 @@ rounded-md bg-white dark:bg-cBlack-2 shadow-lg ring-1 ring-black ring-opacity-5 
                 {({ active }) => (
                   <button
                     type='button'
-                    className={`${
-                      active ? 'bg-cBlue-500 text-white' : 'text-gray-900'
+                    className={`${active ? 'bg-cBlue-500 text-white' : 'text-gray-900'
                     } group flex w-full items-center rounded-md px-4 py-4 text-sm`}
                   >
                     <span className='pr-4 text-2xl dark:text-gray-300'>{item.icon}</span>
