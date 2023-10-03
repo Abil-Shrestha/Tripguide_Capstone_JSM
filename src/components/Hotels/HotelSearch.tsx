@@ -17,7 +17,7 @@ const HotelSearch = () => {
   };
 
   useEffect(() => {
-    console.log(data);
+    console.log('Hello There');
   }, [data]);
 
   return (

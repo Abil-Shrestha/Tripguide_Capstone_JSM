@@ -1,17 +1,15 @@
 import { useState } from 'react';
 import { BiEditAlt } from 'react-icons/bi';
-import { useSession } from 'next-auth/react';
 
 import { useFormFields } from '@utils/hooks/useFormFields';
 import { FormInput } from '@components';
 
 const PersonalDetails = () => {
   const [isDisabled, setIsDisabled] = useState(true);
-  const { data: session } = useSession();
 
   const [values, handleChange] = useFormFields({
-    displayName: session?.user?.name || '',
-    realName: session?.user?.name || '',
+    displayName: 'Jwick',
+    realName: 'John Wick',
     gender: '',
     birthday: '',
     phoneNumber: '',

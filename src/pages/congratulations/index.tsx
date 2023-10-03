@@ -22,16 +22,10 @@ const Congratulations = () => {
   // find currency symbol inside currencies array using booking currency
   const currency = currencies.find((item) => item.code === booking?.currency.toUpperCase());
 
-  console.log(currency?.symbol);
-
   useEffect(() => {
     const { bookingId } = router.query;
     if (bookingId) {
-      axios.get(`/api/booking/stripe_intent?payment_intent_id=${bookingId}`)
-        .then((res) => {
-          const { data } = res;
-          setBooking(data);
-        });
+      console.log(bookingId);
     }
   }, [router.query]);
 

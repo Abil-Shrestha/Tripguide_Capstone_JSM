@@ -3,7 +3,6 @@
 // @ts-nocheck
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { useSession } from 'next-auth/react';
 import { Switch } from '@headlessui/react';
 import { useTheme } from 'next-themes';
 
@@ -23,7 +22,7 @@ const Navbar = () => {
   const [isForgotPassword, setIsForgotPassword] = useState<boolean>(false);
   const [isLanguagesOpen, setIsLanguagesOpen] = useState<boolean>(false);
   const [isCurrenciesOpen, setIsCurrenciesOpen] = useState<boolean>(false);
-  const { data: session } = useSession();
+
   const [enabled, setEnabled] = useState(true);
 
   useEffect(() => {
@@ -72,77 +71,39 @@ const Navbar = () => {
           </div>
         </Link>
       </div>
-      {session ? (
-        <div className='flex items-center gap-3 sm:gap-6 relative'>
-          <div className='flex relative'>
-            <button type='button' className='menu-btn' onClick={() => handleOpenMenu('currency')}>
-              <p className='text-[14px] xs:text-[16px] text-gray-500 dark:text-gray-200 font-medium'>{selectedCurrecy.code}</p>
-            </button>
-            <CustomSelect
-              type='currency'
-              menu={currencies}
-              open={isCurrenciesOpen}
-              selected={selectedCurrecy}
-              setOpen={setIsCurrenciesOpen}
-              setValue={setSelectedCurrecy}
-              styles='w-[300px] xs:w-[335px] h-[415px] bg-white dark:bg-cBlack-2 shadow-lg z-20 p-4 rounded-xl absolute top-[60px] left-[-170px] xs:left-[-195px] md:left-[-60px] overflow-y-scroll scrollbar-hide'
-            />
-          </div>
-          <div className='flex relative'>
-            <button type='button' className='menu-btn' onClick={() => handleOpenMenu('language')}>
-              <img src={selectedLanguage.image} alt='country' className='h-5 w-5 xs:h-6 xs:w-6 rounded-full' />
-            </button>
-            <CustomSelect
-              type='language'
-              menu={languages}
-              open={isLanguagesOpen}
-              selected={selectedLanguage}
-              setOpen={setIsLanguagesOpen}
-              setValue={setSelectedLanguage}
-              styles='w-[300px] xs:w-[335px] h-[365px] bg-white dark:bg-cBlack-2 z-20 p-4 rounded-xl absolute top-[60px] left-[-202px] xs:left-[-227px] md:left-[-112px] overflow-y-scroll scrollbar-hide'
-            />
-          </div>
-          <DarkModeToggleNav />
-          <div className='h-10 border-l border-gray-200' />
-          <div className='flex items-center gap-2'>
-            <MenuDropdown />
-          </div>
+      <div className='flex items-center gap-3 relative'>
+        <div className='flex relative'>
+          <button type='button' className='menu-btn' onClick={() => handleOpenMenu('currency')}>
+            <p className='text-[12px] xs:text-[16px] text-gray-500 dark:text-gray-200 font-medium'>{selectedCurrecy.code}</p>
+          </button>
+          <CustomSelect
+            type='currency'
+            menu={currencies}
+            open={isCurrenciesOpen}
+            selected={selectedCurrecy}
+            setOpen={setIsCurrenciesOpen}
+            setValue={setSelectedCurrecy}
+            styles='w-[335px] h-[415px] bg-white dark:bg-cBlack-2 z-20 p-4 rounded-xl absolute top-[60px] right-[-115px] overflow-y-scroll scrollbar-hide'
+          />
         </div>
-      ) : (
-        <div className='flex items-center gap-3 relative'>
-          <div className='flex relative'>
-            <button type='button' className='menu-btn' onClick={() => handleOpenMenu('currency')}>
-              <p className='text-[12px] xs:text-[16px] text-gray-500 dark:text-gray-200 font-medium'>{selectedCurrecy.code}</p>
-            </button>
-            <CustomSelect
-              type='currency'
-              menu={currencies}
-              open={isCurrenciesOpen}
-              selected={selectedCurrecy}
-              setOpen={setIsCurrenciesOpen}
-              setValue={setSelectedCurrecy}
-              styles='w-[335px] h-[415px] bg-white dark:bg-cBlack-2 z-20 p-4 rounded-xl absolute top-[60px] right-[-115px] overflow-y-scroll scrollbar-hide'
-            />
-          </div>
-          <div className='flex relative'>
-            <button type='button' className='menu-btn' onClick={() => handleOpenMenu('language')}>
-              <img src={selectedLanguage.image} alt='country' className='h-6 w-6 rounded-full' />
-            </button>
-            <CustomSelect
-              type='language'
-              menu={languages}
-              open={isLanguagesOpen}
-              selected={selectedLanguage}
-              setOpen={setIsLanguagesOpen}
-              setValue={setSelectedLanguage}
-              styles='w-[335px] h-[365px] bg-white dark:bg-cBlack-2 z-20 p-4 rounded-xl absolute top-[60px] right-[-80px] overflow-y-scroll scrollbar-hide'
-            />
-          </div>
-          <div>
-            <DarkModeToggle />
-          </div>
+        <div className='flex relative'>
+          <button type='button' className='menu-btn' onClick={() => handleOpenMenu('language')}>
+            <img src={selectedLanguage.image} alt='country' className='h-6 w-6 rounded-full' />
+          </button>
+          <CustomSelect
+            type='language'
+            menu={languages}
+            open={isLanguagesOpen}
+            selected={selectedLanguage}
+            setOpen={setIsLanguagesOpen}
+            setValue={setSelectedLanguage}
+            styles='w-[335px] h-[365px] bg-white dark:bg-cBlack-2 z-20 p-4 rounded-xl absolute top-[60px] right-[-80px] overflow-y-scroll scrollbar-hide'
+          />
         </div>
-      )}
+        <div>
+          <DarkModeToggle />
+        </div>
+      </div>
     </div>
   );
 };

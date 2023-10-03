@@ -32,21 +32,23 @@ const ConfirmCarBooking = () => {
 
   const handlePreviousRoute = (type) => {
     if (type === 'listing') {
-      router.push({ pathname: '/listing/car',
+      router.push({
+        pathname: '/listing/car',
         query: {
           fromId: carFromID,
           toId: carToID,
           pickupDate: `${carStartDate?.toISOString().split('T')[0]} ${carStartDate?.toISOString().split('T')[1].slice(0, 8)}`,
           dropoffDate: `${carEndDate?.toISOString().split('T')[0]} ${carEndDate?.toISOString().split('T')[1].slice(0, 8)}`,
-        } });
+        },
+      });
     } else if (type === 'details') {
       router.push({ pathname: `/listing/car/details/${activeCar?.id}` });
     }
   };
 
-  const handleRentalCarCheckout = () => {
+  const handleRentalCarCheckout = (e) => {
     // this will make the call to stripe, add a rental car booking to our DB and push the user to the success page
-    router.push('/congratulations/car');
+    e.preventdefault();
   };
 
   return (
