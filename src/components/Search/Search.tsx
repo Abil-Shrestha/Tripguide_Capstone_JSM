@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import { useSelector } from 'react-redux';
 import { MdHotel, MdFlightTakeoff, MdDirectionsCarFilled, MdKeyboardArrowDown } from 'react-icons/md';
 
-import { Passengers, HotelSearch, CarSearch, FlightSearch } from '@components';
+import { HotelSearch, CarSearch, FlightSearch } from '@components';
 import { useGlobalContext } from '@context/GlobalContext';
 
 const classNames = {
@@ -119,7 +119,6 @@ const Search = () => {
 
   return (
     <div className={router.pathname === '/' ? classNames.homeSearch : classNames.otherSearch}>
-      {isPassengerOpen && <Passengers />}
       <div className='flex flex-col'>
         <div className='relative flex justify-between h-12 w-full'>
           <div className='absolute bottom-0 h-1 w-full bg-gray/30' />

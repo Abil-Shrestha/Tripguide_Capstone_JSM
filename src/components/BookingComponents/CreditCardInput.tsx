@@ -7,7 +7,6 @@ import { loadStripe } from '@stripe/stripe-js';
 import axios from 'axios';
 import { CardNumberElement, CardExpiryElement, CardCvcElement, Elements, useElements, useStripe } from '@stripe/react-stripe-js';
 
-import supabase from '@utils/supabase';
 import { useGlobalContext } from '@context/GlobalContext';
 
 const styles = {
@@ -52,18 +51,6 @@ const CreditCardFields = () => {
     if (paymentIntent) {
       setIsSubmitting(false);
       setIsSubmitted(true);
-
-      const { data, error: supabaseError } = await supabase.from('booking').insert({
-        stripe_payment_intent_id: paymentIntentId,
-        user_id: '',
-        booking_start_date: '',
-        booking_end_date: '',
-        booking_status: paymentIntent.status,
-        booking_price: paymentIntent.amount,
-
-      });
-
-      console.log(data, supabaseError);
 
       setTimeout(() => {
         router.push({

@@ -10,7 +10,6 @@ const Confirm = () => {
   const [selectedCard, setSelectedCard] = useState('');
   const [saveCard, setSaveCard] = useState([]);
   const { data: session } = useSession();
-  console.log('session ---->', session.user);
   const handleSelectCard = (card: string) => {
     setSelectedCard(card);
   };

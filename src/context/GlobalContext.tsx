@@ -35,7 +35,7 @@ export const GlobalProvider = ({ children }) => {
   const [activeFlight, setActiveFlight] = useState<any>(null);
   const [flightSortBy, setFlightSortBy] = useState('PRICE');
   const [adults, setAdults] = useState(1);
-  const [childrenPassenger, setChildrenPassenger] = useState(0);
+  const [childrenPassenger, setChildrenPassenger] = useState();
   const [infants, setInfants] = useState(0);
   const [flightPassengers, setFlightPassengers] = useState(adults + childrenPassenger + infants);
 

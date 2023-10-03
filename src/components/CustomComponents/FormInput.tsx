@@ -10,10 +10,11 @@ type FormInputProps = {
   icon?: React.ReactNode;
   handleClick?: () => void;
   onClick?: () => void;
-  [x: string] : unknown
+  [x: string] : unknown;
+  options?: string[];
 }
 
-const Input = ({ label, icon, type = 'text', name, value, onChange, handleClick, styles, select, options, ...rest }: FormInputProps) => (
+const Input = ({ label, icon, type = 'text', name, value, onChange, handleClick, styles, select, options = [''], ...rest }: FormInputProps) => (
   <div className={`${icon ? 'relative' : ''} flex flex-col gap-2 w-full`}>
     <label
       htmlFor={name}

@@ -12,11 +12,12 @@
       "dom.iterable",
       "esnext"
     ],
-    "allowJs": true,
+    "allowJs": false,
     "skipLibCheck": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
+    "noImplicitAny": false ,
     "incremental": true,
     "esModuleInterop": true,
     "module": "esnext",
