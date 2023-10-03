@@ -95,7 +95,6 @@ const Calendar = ({ id, label, type, startDate, endDate, setStartDate, setEndDat
     }
   };
 
-
   return (
     <DatePicker
       showPopperArrow={false}
@@ -109,7 +108,7 @@ const Calendar = ({ id, label, type, startDate, endDate, setStartDate, setEndDat
       showDisabledMonthNavigation
       customInput={<CustomInput id={id} label={label} startDate={startDate} endDate={endDate} onClick={undefined} />}
       calendarContainer={MyContainer}
-      calendarClassName='flex items-center justify-center w-fit font-DMSans border-none'
+      calendarClassName='flex items-center justify-center w-full font-DMSans border-none bg-primary'
       renderCustomHeader={({
         monthDate,
         customHeaderCount,
