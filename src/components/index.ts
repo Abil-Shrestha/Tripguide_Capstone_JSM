@@ -4,7 +4,6 @@ export { default as Search } from './Search/Search';
 // navbar components
 export { default as AuthModal } from './Navbar/AuthModal';
 export { default as AuthForm } from './Navbar/AuthForm';
-export { default as MenuDropdown } from './Navbar/MenuDropdown';
 export { default as ForgotPassword } from './Navbar/ForgotPassword';
 export { default as CustomSelect } from './Navbar/CustomSelect';
 export { default as Navbar } from './Navbar/Navbar';
