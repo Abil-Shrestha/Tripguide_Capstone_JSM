@@ -16,8 +16,6 @@ module.exports = {
     sourceType: 'module',
     requireConfigFile: false,
     parser: '@typescript-eslint/parser',
-    quotes: 'single',
-    'jsx-quotes': ['error', 'prefer-single'],
   },
   plugins: ['react', '@typescript-eslint'],
   rules: {
