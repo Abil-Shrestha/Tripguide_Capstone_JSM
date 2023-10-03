@@ -1,3 +1,5 @@
+'use client';
+
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { forwardRef } from 'react';
 import { useDispatch } from 'react-redux';

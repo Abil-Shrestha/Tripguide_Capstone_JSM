@@ -117,18 +117,6 @@ export interface GlobalContextType {
   setFlightPassengers: (passengers: number) => void;
   flightSortBy: string;
   setFlightSortBy: (sortBy: string) => void;
-  adults: string;
-  adultIncrement: () => void;
-  adultDecrement: () => void;
-  childIncrement: () => void;
-  childDecrement: () => void;
-  infantIncrement: () => void;
-  infantDecrement: () => void;
-  childrenPassenger:string;
-  setChildrenPassenger:() => void;
-  setAdults: () => void;
-  infants:string;
-  setInfants:() => void;
 }
 
 export interface BookingContextType {

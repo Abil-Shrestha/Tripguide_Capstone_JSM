@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="https://github.com/Abil-Shrestha/Tripguide_Capstone_JSM/blob/main/public/assets/tipguide_logo.jpg" alt="logo" height="auto" />
+  <img src="https://github.com/Abil-Shrestha/Tripguide_Capstone_JSM/blob/main/public/assets/tipguide_logo.jpg" height="350px" width="350px" alt="logo" height="auto" />
   <h1>Tripguide</h1>
   
   <p>
@@ -40,21 +40,22 @@
 ### :camera: Screenshots
 
 <div align="center"> 
-  <img src="./public/Screenshots/1.png" alt="screenshot" />
-  <img src="./public/Screenshots/2.png" alt="screenshot" />
-  <img src="./public/Screenshots/3.png" alt="screenshot" />
-  <img src="./public/Screenshots/4.png" alt="screenshot" />
-  <img src="./public/Screenshots/5.png" alt="screenshot" />
-  <img src="./public/Screenshots/6.png" alt="screenshot" />
-  <img src="./public/Screenshots/7.png" alt="screenshot" />
-  <img src="./public/Screenshots/8.png" alt="screenshot" />
+  <img src="./public/Screenshots/7.png" alt="screenshot" "/>
+  <img src="./public/Screenshots/1.png" alt="screenshot" "/>
+  <img src="./public/Screenshots/2.jpg" alt="screenshot" " />
+  <img src="./public/Screenshots/3.png" alt="screenshot" "/>
+  <img src="./public/Screenshots/4.png" alt="screenshot" "/>
+  <img src="./public/Screenshots/5.png" alt="screenshot" "/>
+  <img src="./public/Screenshots/6.png" alt="screenshot" "/>
+  <img src="./public/Screenshots/8.png" alt="screenshot" "/>
+  
+  
 </div>
 
 
 <!-- TechStack -->
 ### :space_invader: Tech Stack
 
-<details>
   <ul>
     <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
     <li><a href="https://nextjs.org/">Next.js</a></li>
@@ -63,7 +64,6 @@
     <li><a href="https://redux-toolkit.js.org/">Redux Toolkit</a></li>
     <li><a href="https://prisma.io/">Prisma</a></li> 
   </ul>
-</details>
 
 
 <!-- Color Reference -->
