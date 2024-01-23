@@ -24,7 +24,7 @@ a {
 
 @layer components {
   .react-datepicker {
-    @apply top-[10px] -left-[200px] rounded-[20px] overflow-clip;
+    @apply top-[10px] -left-[200px] rounded-[20px] overflow-clip bg-white dark:bg-cBlack-3;
   }
 
 	.react-datepicker__month-container {
@@ -32,7 +32,7 @@ a {
 	}
 
   .react-datepicker__header {
-    @apply relative text-center bg-white dark:bg-cBlack-2 border-0 mb-[14px];
+    @apply relative text-centerborder-0 mb-[14px] dark:bg-red-100;
   }
 
   .react-datepicker__day-names {
@@ -40,7 +40,7 @@ a {
   }
 
   .react-datepicker__day-name {
-    @apply text-[#777E91] text-[18px] font-medium dark:text-cBlack-7;
+    @apply text-[#04060b] text-[18px] font-medium dark:text-cBlack-7!important ;
   } 
 
   .react-datepicker__month {
@@ -84,11 +84,16 @@ a {
   .react-datepicker__day--in-range:hover {
     @apply bg-primaryBlue rounded-[20px];
   }
+  .react-datepicker,
+  .react-datepicker__month-container,
+  .react-datepicker__header{
+    @apply bg-white dark:bg-cBlack-2 !important;
+  }
 
   .react-datepicker,
   .react-datepicker__month-container,
   .react-datepicker__header:hover {
-    @apply bg-white dark:bg-cBlack-2;
+    @apply bg-white dark:bg-cBlack-2 !important;
   }
 
   .checked {
