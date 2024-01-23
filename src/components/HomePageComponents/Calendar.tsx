@@ -108,7 +108,7 @@ const Calendar = ({ id, label, type, startDate, endDate, setStartDate, setEndDat
       showDisabledMonthNavigation
       customInput={<CustomInput id={id} label={label} startDate={startDate} endDate={endDate} onClick={undefined} />}
       calendarContainer={MyContainer}
-      calendarClassName='flex items-center justify-center w-full font-DMSans border-none bg-primary'
+      calendarClassName='flex items-center justify-center w-full font-DMSans border-none bg-primary dark:bg-primary dark:text-white-200'
       renderCustomHeader={({
         monthDate,
         customHeaderCount,
